@@ -10,10 +10,9 @@ Source0:	https://ftp.mozilla.org/pub/firefox/releases/%{version}esr/source/firef
 Patch0:		%{name}-shell-version.patch
 Patch1:		%{name}-pkg-config-version.patch
 Patch2:		%{name}-1269317.patch
+Patch3:		%{name}-system-virtualenv.patch
 URL:		https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Releases/38
-BuildRequires:	libffi-devel >= 3.0.9
 BuildRequires:	libffi-devel >= 5:3.0.9
-BuildRequires:	libstdc++-devel
 BuildRequires:	libstdc++-devel >= 6:4.4
 BuildRequires:	nspr-devel >= 4.9.2
 BuildRequires:	perl-base >= 1:5.6
@@ -61,6 +60,7 @@ Pliki nagłówkowe do biblioteki JavaScript.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 cd js/src
 
