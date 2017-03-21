@@ -1,0 +1,26 @@
+Description: Disable the js JIT on x32.
+Author: Adam Borowski <kilobyte@angband.pl>
+Index: mozjs24-24.2.0/js/src/configure.in
+===================================================================
+--- mozjs24-24.2.0.orig/js/src/configure.in
++++ mozjs24-24.2.0/js/src/configure.in
+@@ -2072,6 +2072,8 @@ fi
+ dnl Configure JIT support
+ 
+ case "$target" in
++x86_64*-gnux32)
++    ;;
+ i?86-*)
+     ENABLE_METHODJIT=1
+     ENABLE_ION=1
+--- mozjs-24.2.0/js/src/configure~	2013-12-11 23:23:20.000000000 +0100
++++ mozjs-24.2.0/js/src/configure	2015-03-23 22:55:24.995319443 +0100
+@@ -8243,6 +8243,8 @@
+ 
+ 
+ case "$target" in
++x86_64*-gnux32)
++    ;;
+ i?86-*)
+     ENABLE_METHODJIT=1
+     ENABLE_ION=1

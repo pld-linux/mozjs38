@@ -11,6 +11,8 @@ Patch0:		%{name}-shell-version.patch
 Patch1:		%{name}-pkg-config-version.patch
 Patch2:		%{name}-1269317.patch
 Patch3:		%{name}-system-virtualenv.patch
+Patch4:		Disable-js-JIT-on-x32.patch
+Patch5:		%{name}-x32.patch
 URL:		https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Releases/38
 BuildRequires:	libffi-devel >= 5:3.0.9
 BuildRequires:	libstdc++-devel >= 6:4.4
@@ -61,6 +63,8 @@ Pliki nagłówkowe do biblioteki JavaScript.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
+%patch5 -p1
 
 cd js/src
 

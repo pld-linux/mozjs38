@@ -1,0 +1,11 @@
+--- mozilla-esr38/js/src/jstypes.h.x32fix	2017-03-21 08:17:52.446161040 +0100
++++ mozilla-esr38/js/src/jstypes.h	2017-03-21 08:18:23.531014466 +0100
+@@ -142,7 +142,7 @@
+ # endif
+ #elif defined(__GNUC__)
+ /* Additional GCC defines are when running on Solaris, AIX, and HPUX */
+-# if defined(__x86_64__) || defined(__sparcv9) || \
++# if (defined(__x86_64__) && !defined(__ILP32__)) || defined(__sparcv9) || \
+         defined(__64BIT__) || defined(__LP64__)
+ #  define JS_64BIT
+ # endif
