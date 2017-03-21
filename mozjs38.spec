@@ -2,7 +2,7 @@ Summary:	SpiderMonkey 38 - JavaScript implementation
 Summary(pl.UTF-8):	SpiderMonkey 38 - implementacja języka JavaScript
 Name:		mozjs38
 Version:	38.8.0
-Release:	1
+Release:	2
 License:	MPL v2.0
 Group:		Libraries
 Source0:	https://ftp.mozilla.org/pub/firefox/releases/%{version}esr/source/firefox-%{version}esr.source.tar.bz2
@@ -13,6 +13,7 @@ Patch2:		%{name}-1269317.patch
 Patch3:		%{name}-system-virtualenv.patch
 Patch4:		Disable-js-JIT-on-x32.patch
 Patch5:		%{name}-x32.patch
+Patch6:		%{name}-copy-headers.patch
 URL:		https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Releases/38
 BuildRequires:	libffi-devel >= 5:3.0.9
 BuildRequires:	libstdc++-devel >= 6:4.4
@@ -65,6 +66,7 @@ Pliki nagłówkowe do biblioteki JavaScript.
 %patch3 -p1
 %patch4 -p1
 %patch5 -p1
+%patch6 -p1
 
 cd js/src
 
