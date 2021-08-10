@@ -2,7 +2,7 @@ Summary:	SpiderMonkey 38 - JavaScript implementation
 Summary(pl.UTF-8):	SpiderMonkey 38 - implementacja języka JavaScript
 Name:		mozjs38
 Version:	38.8.0
-Release:	7
+Release:	8
 License:	MPL v2.0
 Group:		Libraries
 Source0:	https://ftp.mozilla.org/pub/firefox/releases/%{version}esr/source/firefox-%{version}esr.source.tar.bz2
