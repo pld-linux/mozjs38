@@ -11,8 +11,8 @@ Index: mozjs24-24.2.0/js/src/configure.in
 +x86_64*-gnux32)
 +    ;;
  i?86-*)
-     ENABLE_METHODJIT=1
      ENABLE_ION=1
+     AC_DEFINE(JS_CPU_X86)
 --- mozjs-24.2.0/js/src/configure~	2013-12-11 23:23:20.000000000 +0100
 +++ mozjs-24.2.0/js/src/configure	2015-03-23 22:55:24.995319443 +0100
 @@ -8243,6 +8243,8 @@
@@ -22,5 +22,5 @@ Index: mozjs24-24.2.0/js/src/configure.in
 +x86_64*-gnux32)
 +    ;;
  i?86-*)
-     ENABLE_METHODJIT=1
      ENABLE_ION=1
+     cat >> confdefs.pytmp <<\EOF

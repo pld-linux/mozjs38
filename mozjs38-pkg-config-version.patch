@@ -9,7 +9,7 @@ Index: b/js/src/Makefile.in
 +++ b/js/src/Makefile.in
 @@ -214,10 +214,10 @@
  $(JS_CONFIG_NAME): js-config
-    cp $^ $@
+ 	cp $^ $@
  
 -$(LIBRARY_NAME).pc: js.pc
 +$(JS_LIBRARY_NAME).pc: js.pc
